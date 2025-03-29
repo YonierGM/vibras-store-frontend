@@ -65,7 +65,7 @@ export function Header() {
             </li>
           </ul>
         </nav>
-        <div className="Carrito">
+        <div className="Cart">
           <BsCart3 className="Icon" />
         </div>
       </div>
