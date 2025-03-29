@@ -1,0 +1,79 @@
+@media only screen and (max-width: 480px) {
+  .ContentDetail {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 3%;
+  }
+  .Images {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .Principal {
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+  }
+
+  .Principal img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .Galeria {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+
+  .Galeria img {
+    width: 100px;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .Galeria img {
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+  }
+
+  .Galeria img:hover {
+    opacity: 1;
+  }
+
+  .Galeria img.active {
+    border: 1px solid rgba(27, 27, 27, 0.5); /* Resalta la imagen seleccionada */
+    opacity: 1;
+  }
+
+  .Info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .Buy {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .Buy button {
+    width: 100%;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+  }
+  .Buy button:hover {
+    background-color: #333333;
+  }
+}

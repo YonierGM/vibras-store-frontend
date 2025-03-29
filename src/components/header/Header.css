@@ -1,0 +1,93 @@
+@media only screen and (max-width: 480px) {
+  .Icon {
+    font-size: 1.5rem;
+    color: rgb(255, 255, 255);
+  }
+  .Mostrar {
+    left: 0 !important;
+    top: 0vh;
+    display: block;
+  }
+  .Overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    z-index: 998; /* Debe estar detrás del menú pero encima del resto del contenido */
+    pointer-events: all; /* Captura los clics */
+  }
+  .no-scroll {
+    overflow: hidden; /* Deshabilita el scroll */
+    height: 100vh; /* Evita que el contenido se desplace */
+    z-index: 999;
+  }
+  .Header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    background: #000000;
+    height: 10vh;
+  }
+  .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    height: 10vh;
+    color: rgb(0, 0, 0);
+    background: #f2f4f7;
+  }
+  .Logo {
+    display: none;
+  }
+  .Main {
+    display: flex;
+    align-items: center;
+  }
+
+  .Nav {
+    position: absolute;
+    height: 100vh !important;
+    top: 0vh;
+    left: -100%;
+    width: 80%;
+    background: rgb(255, 255, 255);
+    z-index: 1000;
+    transition: all 0.5s ease-in-out;
+    overflow: hidden;
+  }
+
+  ul {
+    padding: 0 5%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-top: 10vh;
+  }
+
+  ul li {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 0.16fr 1fr;
+    justify-content: center;
+    align-items: center;
+
+    height: 5vh;
+  }
+
+  li svg {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  ul li a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+}
