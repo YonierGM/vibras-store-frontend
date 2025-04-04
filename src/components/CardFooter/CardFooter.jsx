@@ -1,7 +1,13 @@
 import React from "react";
 import { getStars } from "../../hooks/useStar";
 import "./CardFooter.css";
-export function CardFooter({ rating, price, discountPercentage }) {
+export function CardFooter({
+  rating,
+  price,
+  priceAfterDiscount,
+  priceBeforeDiscount,
+  discountPercentage,
+}) {
   const stars = getStars(rating);
 
   return (
@@ -56,18 +62,15 @@ export function CardFooter({ rating, price, discountPercentage }) {
       <div className="PriceProduct">
         <span className="PriceBeforeDiscount">
           $
-          {(price * 1000).toLocaleString("es-ES", {
+          {priceBeforeDiscount.toLocaleString("es-ES", {
             useGrouping: true,
           })}
         </span>
         <span className="PriceAfterDiscount">
           $
-          {(price - (price * discountPercentage) / 100).toLocaleString(
-            "es-ES",
-            {
-              useGrouping: true,
-            }
-          )}
+          {priceAfterDiscount.toLocaleString("es-ES", {
+            useGrouping: true,
+          })}
           <span className="DiscountPercentage">
             <p>{discountPercentage}% OFF</p>
           </span>

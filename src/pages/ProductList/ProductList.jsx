@@ -11,6 +11,7 @@ export function ProductList() {
   useEffect(() => {
     if (data) {
       setProducts(data.products);
+      console.log("Products:", products);
     }
   }, [data]);
 
@@ -26,6 +27,8 @@ export function ProductList() {
             rating={product.rating}
             price={product.price}
             discountPercentage={product.discountPercentage}
+            priceAfterDiscount={product.priceAfterDiscount}
+            priceBeforeDiscount={product.priceBeforeDiscount}
             description={product.description}
           />
         ))}

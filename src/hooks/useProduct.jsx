@@ -11,7 +11,25 @@ export function useProduct(id) {
     fetch(`https://dummyjson.com/products/${id}`)
       .then((response) => response.json())
       .then((data) => {
-        setProduct(data);
+        // Calcula los precios directamente
+        const priceBeforeDiscount = parseFloat(data.price * 1000);
+
+        const priceAfterDiscount = Math.round(
+          (
+            priceBeforeDiscount -
+            (priceBeforeDiscount * data.discountPercentage) / 100
+          ).toFixed(3)
+        );
+
+        // Agrega las propiedades calculadas al objeto `data`
+        const enrichedData = {
+          ...data,
+          priceBeforeDiscount,
+          priceAfterDiscount,
+        };
+
+        setProduct(enrichedData);
+        console.log("Product fetched:", enrichedData); // Verifica si `product` es undefined
         setLoading(false);
       })
       .catch((error) => {

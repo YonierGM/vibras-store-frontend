@@ -11,6 +11,8 @@ export function Card({
   rating,
   price,
   discountPercentage,
+  priceAfterDiscount,
+  priceBeforeDiscount,
   description,
 }) {
   const navigate = useNavigate();
@@ -34,6 +36,8 @@ export function Card({
             rating={rating}
             price={price}
             discountPercentage={discountPercentage}
+            priceAfterDiscount={priceAfterDiscount}
+            priceBeforeDiscount={priceBeforeDiscount}
           />
         </div>
       </div>

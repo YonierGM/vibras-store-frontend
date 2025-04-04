@@ -2,12 +2,16 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useProduct } from "../../hooks/useProduct";
 import { CardFooter } from "../CardFooter/CardFooter";
+import { useCart } from "../../components/cart/CartContext";
+
 import "./ProductDetail.css";
+import { Cart } from "../cart/Cart";
 
 export function ProductDetail() {
   const { id } = useParams();
   const { product, loading } = useProduct(id);
   const [image, setImage] = useState(null); // Estado para la imagen principal
+  const { addToCart } = useCart();
 
   // Actualiza la imagen principal cuando el producto se carga
   useEffect(() => {
@@ -26,6 +30,7 @@ export function ProductDetail() {
 
   return (
     <>
+      <Cart />
       <div className="ContentDetail">
         <div className="Images">
           <div className="Principal">
@@ -46,14 +51,19 @@ export function ProductDetail() {
         <div className="Info">
           <h1>{product.title}</h1>
           <p>{product.description}</p>
+          {/* Pasamos el objeto `product` al componente `CardFooter` */}
           <CardFooter
             rating={product.rating}
             price={product.price}
             discountPercentage={product.discountPercentage}
+            priceAfterDiscount={product.priceAfterDiscount}
+            priceBeforeDiscount={product.priceBeforeDiscount}
           />
           <div className="Buy">
             <button>Comprar</button>
-            <button>Agregar al carrito</button>
+            <button onClick={() => addToCart(product, 1)} className="AddToCart">
+              Agregar al carrito
+            </button>
           </div>
         </div>
       </div>
