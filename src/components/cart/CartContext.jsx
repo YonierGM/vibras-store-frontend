@@ -20,6 +20,15 @@ export function CartProvider({ children }) {
     });
   };
 
+  // **Nueva función para actualizar la cantidad de un producto**
+  function updateQuantity(productId, newQuantity) {
+    setCart((prevCart) =>
+      prevCart.map((item) =>
+        item.id === productId ? { ...item, quantity: newQuantity } : item
+      )
+    );
+  }
+
   const removeFromCart = (productId) => {
     console.log("Producto eliminado:", productId);
     setCart((prevCart) => prevCart.filter((item) => item.id !== productId));
@@ -38,7 +47,14 @@ export function CartProvider({ children }) {
 
   return (
     <CartContext.Provider
-      value={{ cart, addToCart, removeFromCart, clearCart, getTotal }}
+      value={{
+        cart,
+        addToCart,
+        removeFromCart,
+        updateQuantity,
+        clearCart,
+        getTotal,
+      }}
     >
       {children}
     </CartContext.Provider>

@@ -10,11 +10,15 @@ import { PiPackage } from "react-icons/pi";
 import { MdOutlineContactSupport } from "react-icons/md";
 
 import "./Header.css";
+import { Cart } from "../cart/Cart";
 export function Header() {
   const [menu, setMenu] = useState(false);
+  const [cart, setCart] = useState(false); // Estado para el carrito
+
   // Efecto para controlar el scroll del body
   useEffect(() => {
-    if (menu) {
+    if (menu || cart) {
+      // Si el menú o el carrito están abiertos, deshabilitar el scroll
       document.body.classList.add("no-scroll");
     } else {
       document.body.classList.remove("no-scroll");
@@ -22,7 +26,7 @@ export function Header() {
     return () => {
       document.body.classList.remove("no-scroll"); // Limpieza al desmontar
     };
-  }, [menu]);
+  }, [menu, cart]);
   return (
     <header className="Header">
       <div className="Izquierda">
@@ -36,7 +40,6 @@ export function Header() {
       <div className="Main">
         {/* Overlay que bloquea la interacción con los elementos debajo */}
         {menu && <div className="Overlay" onClick={() => setMenu(false)}></div>}
-
         <nav className={menu ? "Mostrar Nav" : "Nav"}>
           <div className="NavHeader">
             <div className="content">
@@ -65,8 +68,22 @@ export function Header() {
             </li>
           </ul>
         </nav>
+
+        {cart && <div className="Overlay" onClick={() => setCart(false)}></div>}
+        <div className={cart ? "MostrarCart CartAside" : "CartAside"}>
+          <div className="NavHeader">
+            <div className="content">
+              <h1>Carrito de compras</h1>
+              <IoCloseSharp onClick={() => setCart(!cart)} />
+            </div>
+          </div>
+          <div className="CartContent">
+            <Cart />
+          </div>
+        </div>
+
         <div className="Cart">
-          <BsCart3 className="Icon" />
+          <BsCart3 className="Icon" onClick={() => setCart(!cart)} />
         </div>
       </div>
     </header>

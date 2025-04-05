@@ -8,6 +8,13 @@
     top: 0vh;
     display: block;
   }
+
+  .MostrarCart {
+    left: 0 !important;
+    top: 0vh;
+    display: block;
+  }
+
   .Overlay {
     position: fixed;
     top: 0;
@@ -58,6 +65,19 @@
     z-index: 1000;
     transition: all 0.3s ease-in-out;
     overflow: hidden;
+  }
+
+  .CartAside {
+    position: absolute;
+    height: 100vh !important;
+    top: 0vh;
+    left: -100%;
+    width: 80%;
+    background: rgb(255, 255, 255);
+    z-index: 1000;
+    transition: all 0.3s ease-in-out;
+    overflow-x: hidden;
+    overflow-y: auto;
   }
 
   ul {

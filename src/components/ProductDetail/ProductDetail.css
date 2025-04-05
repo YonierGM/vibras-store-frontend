@@ -76,4 +76,12 @@
   .Buy button:hover {
     background-color: #333333;
   }
+
+  .AddCart {
+    width: 100%;
+    height: 50px;
+    display: grid;
+    grid-template-columns: 0.4fr 1fr;
+    gap: 20px;
+  }
 }

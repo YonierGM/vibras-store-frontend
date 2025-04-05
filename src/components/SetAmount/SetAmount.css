@@ -1,0 +1,25 @@
+.SetAmount {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+}
+
+.SetAmount input {
+  width: 30px;
+  height: 100%;
+  text-align: center;
+  font-size: 1.3rem;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.SetAmount svg {
+  background: rgba(0, 0, 0, 0.9);
+  width: 20px;
+  height: 50%;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
