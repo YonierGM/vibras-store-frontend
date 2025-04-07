@@ -3,6 +3,7 @@ import { Card } from "../../components/card/Card";
 import { useFetch } from "../../hooks/useFetch";
 import { useNavigate } from "react-router-dom";
 import "./ProductList.css";
+import { Spinner } from "../../components/spinner/Spinner";
 
 export function ProductList() {
   const { data, loading } = useFetch("https://dummyjson.com/products");
@@ -14,6 +15,14 @@ export function ProductList() {
       console.log("Products:", products);
     }
   }, [data]);
+
+  if (loading) {
+    return (
+      <>
+        <Spinner />
+      </>
+    );
+  }
 
   return (
     <>

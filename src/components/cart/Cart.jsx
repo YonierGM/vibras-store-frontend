@@ -52,9 +52,9 @@ export function Cart() {
                 </div>
               </div>
               <div className="CartItemDetails">
-                <div className="TitleItem">
+                {/* <div className="TitleItem">
                   <h2>{item.title}</h2>
-                </div>
+                </div> */}
                 <div className="DescriptionItem">
                   <p>{item.description}</p>
                 </div>

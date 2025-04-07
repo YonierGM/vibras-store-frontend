@@ -1,9 +1,18 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useState, useEffect } from "react";
 
 const CartContext = createContext();
 
 export function CartProvider({ children }) {
-  const [cart, setCart] = useState([]);
+  // Inicializa el carrito desde localStorage o como un array vacío
+  const [cart, setCart] = useState(() => {
+    const storedCart = localStorage.getItem("cart");
+    return storedCart ? JSON.parse(storedCart) : [];
+  });
+
+  // Guarda el carrito en localStorage cada vez que cambie
+  useEffect(() => {
+    localStorage.setItem("cart", JSON.stringify(cart));
+  }, [cart]);
 
   const addToCart = (product, quantity = 1) => {
     setCart((prevCart) => {
@@ -20,7 +29,6 @@ export function CartProvider({ children }) {
     });
   };
 
-  // **Nueva función para actualizar la cantidad de un producto**
   function updateQuantity(productId, newQuantity) {
     setCart((prevCart) =>
       prevCart.map((item) =>

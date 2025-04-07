@@ -11,6 +11,7 @@ import { MdOutlineHorizontalRule } from "react-icons/md";
 
 import "./ProductDetail.css";
 import { Cart } from "../cart/Cart";
+import { Spinner } from "../spinner/Spinner";
 
 export function ProductDetail() {
   const { id } = useParams();
@@ -27,7 +28,11 @@ export function ProductDetail() {
   }, [product]);
 
   if (loading) {
-    return <div>Cargando...</div>;
+    return (
+      <>
+        <Spinner />
+      </>
+    );
   }
 
   if (!product) {
