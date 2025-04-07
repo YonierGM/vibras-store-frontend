@@ -36,16 +36,20 @@
     align-items: center;
     padding: 0 5%;
     background: #000000;
-    height: 10vh;
+    height: 8vh;
   }
-  .content {
+  .Content {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 5%;
-    height: 10vh;
+    height: 8vh;
     color: rgb(0, 0, 0);
     background: #f2f4f7;
+  }
+
+  .Content h1 {
+    font-size: 1.2rem;
   }
   .Logo {
     display: none;
@@ -68,11 +72,13 @@
   }
 
   .CartAside {
+    display: flex;
+    flex-direction: column;
     position: absolute;
     height: 100vh !important;
     top: 0vh;
     left: -100%;
-    width: 80%;
+    width: 100%;
     background: rgb(255, 255, 255);
     z-index: 1000;
     transition: all 0.3s ease-in-out;
@@ -85,7 +91,7 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
     padding-top: 10vh;
   }
 

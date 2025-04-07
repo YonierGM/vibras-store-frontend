@@ -2,7 +2,7 @@ import { TiThMenu } from "react-icons/ti";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-import { BsCart3 } from "react-icons/bs";
+import { FaCartShopping } from "react-icons/fa6";
 import { IoCloseSharp } from "react-icons/io5";
 
 import { GoHome } from "react-icons/go";
@@ -42,7 +42,7 @@ export function Header() {
         {menu && <div className="Overlay" onClick={() => setMenu(false)}></div>}
         <nav className={menu ? "Mostrar Nav" : "Nav"}>
           <div className="NavHeader">
-            <div className="content">
+            <div className="Content">
               <h1>Vibras Store</h1>
               <IoCloseSharp onClick={() => setMenu(!menu)} />
             </div>
@@ -72,18 +72,17 @@ export function Header() {
         {cart && <div className="Overlay" onClick={() => setCart(false)}></div>}
         <div className={cart ? "MostrarCart CartAside" : "CartAside"}>
           <div className="NavHeader">
-            <div className="content">
+            <div className="Content">
               <h1>Carrito de compras</h1>
               <IoCloseSharp onClick={() => setCart(!cart)} />
             </div>
           </div>
-          <div className="CartContent">
-            <Cart />
-          </div>
+
+          <Cart />
         </div>
 
         <div className="Cart">
-          <BsCart3 className="Icon" onClick={() => setCart(!cart)} />
+          <FaCartShopping className="Icon" onClick={() => setCart(!cart)} />
         </div>
       </div>
     </header>

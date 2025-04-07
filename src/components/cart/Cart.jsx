@@ -1,6 +1,8 @@
 import { useCart } from "../../components/cart/CartContext";
 
 import { HiOutlineXMark } from "react-icons/hi2";
+import { TbTrashFilled } from "react-icons/tb";
+import { AiFillCreditCard } from "react-icons/ai";
 
 import { SetAmount } from "../SetAmount/SetAmount";
 import { useState } from "react";
@@ -74,15 +76,65 @@ export function Cart() {
         )}
       </div>
       {cart.length > 0 && (
-        <div className="CartFooter">
-          <h2>
-            Total: $
-            {getTotal().toLocaleString("es-ES", {
-              useGrouping: true,
-            })}
-          </h2>
-          <button onClick={clearCart}>Vaciar carrito</button>
-        </div>
+        <>
+          <button className="EmptyCart Button" onClick={clearCart}>
+            <TbTrashFilled />
+            Vaciar carrito
+          </button>
+          <div className="Summary">
+            <div className="ContentSummary">
+              <h2>Order summary</h2>
+              <div className="Items">
+                <div className="OriginalPrice Item">
+                  <span>Precio original</span>
+                  <span>
+                    $
+                    {cart
+                      .reduce(
+                        (total, item) => total + item.priceBeforeDiscount,
+                        0
+                      )
+                      .toLocaleString("es-ES", {
+                        useGrouping: true,
+                      })}
+                  </span>
+                </div>
+                <div className="Savings Item">
+                  <span>Ahorros</span>
+                  <span className="SavingsPrice">
+                    $
+                    {cart
+                      .reduce(
+                        (total, item) =>
+                          total +
+                          (item.priceBeforeDiscount - item.priceAfterDiscount),
+                        0
+                      )
+                      .toLocaleString("es-ES", {
+                        useGrouping: true,
+                      })}
+                  </span>
+                </div>
+                <hr />
+                <div className="TotalPrice Item">
+                  <span>Total</span>
+                  <span>
+                    $
+                    {getTotal().toLocaleString("es-ES", {
+                      useGrouping: true,
+                    })}
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div className="Checkout">
+              <button className="CheckoutButton Button">
+                <AiFillCreditCard />
+                Pagar
+              </button>
+            </div>
+          </div>
+        </>
       )}
     </div>
   );

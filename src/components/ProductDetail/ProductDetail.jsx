@@ -6,8 +6,9 @@ import { useCart } from "../../components/cart/CartContext";
 import { SetAmount } from "../SetAmount/SetAmount";
 import { useAmount } from "../../hooks/useAmount";
 
-import { IoMdAdd } from "react-icons/io";
-import { MdOutlineHorizontalRule } from "react-icons/md";
+import { AiFillCreditCard } from "react-icons/ai";
+
+import { FaCartShopping } from "react-icons/fa6";
 
 import "./ProductDetail.css";
 import { Cart } from "../cart/Cart";
@@ -77,7 +78,10 @@ export function ProductDetail() {
             priceBeforeDiscount={product.priceBeforeDiscount}
           />
           <div className="Buy">
-            <button>Comprar</button>
+            <button className="Button">
+              <AiFillCreditCard />
+              Comprar
+            </button>
             <div className="AddCart">
               <SetAmount
                 amount={amount}
@@ -90,8 +94,9 @@ export function ProductDetail() {
                   console.log("Cantidad:", amount);
                   addToCart(product, amount);
                 }}
-                className="AddToCart"
+                className="AddToCart Button"
               >
+                <FaCartShopping />
                 Agregar al carrito
               </button>
             </div>
