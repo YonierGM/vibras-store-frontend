@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Card } from "../../components/card/Card";
 import { useFetch } from "../../hooks/useFetch";
-import { useNavigate } from "react-router-dom";
 import "./ProductList.css";
 import { Spinner } from "../../components/spinner/Spinner";
 
@@ -12,7 +11,6 @@ export function ProductList() {
   useEffect(() => {
     if (data) {
       setProducts(data.products);
-      console.log("Products:", products);
     }
   }, [data]);
 

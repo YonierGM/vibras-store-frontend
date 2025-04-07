@@ -29,7 +29,6 @@ export function useProduct(id) {
         };
 
         setProduct(enrichedData);
-        console.log("Product fetched:", enrichedData); // Verifica si `product` es undefined
         setLoading(false);
       })
       .catch((error) => {

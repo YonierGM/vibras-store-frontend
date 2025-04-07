@@ -3,6 +3,7 @@
     font-size: 1.5rem;
     color: rgb(255, 255, 255);
   }
+
   .Mostrar {
     left: 0 !important;
     top: 0vh;
@@ -115,5 +116,29 @@
     color: rgb(0, 0, 0);
     font-size: 1.2rem;
     font-weight: 400;
+  }
+
+  .CartIcon {
+    position: relative;
+  }
+
+  .CartIcon .Badge {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: -8px;
+    right: -8px;
+    background: gray;
+    border-radius: 50%;
+  }
+
+  .CartIcon .Badge span {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 0.7rem;
   }
 }

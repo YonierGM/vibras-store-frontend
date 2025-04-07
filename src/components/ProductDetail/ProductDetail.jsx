@@ -7,7 +7,6 @@ import { SetAmount } from "../SetAmount/SetAmount";
 import { useAmount } from "../../hooks/useAmount";
 
 import { AiFillCreditCard } from "react-icons/ai";
-
 import { FaCartShopping } from "react-icons/fa6";
 
 import "./ProductDetail.css";
@@ -90,8 +89,6 @@ export function ProductDetail() {
               />
               <button
                 onClick={() => {
-                  console.log("Producto agregado al carrito:", product);
-                  console.log("Cantidad:", amount);
                   addToCart(product, amount);
                 }}
                 className="AddToCart Button"

@@ -5,7 +5,6 @@ export function useCart() {
 
   // Agregar un producto al carrito
   const addToCart = (product, quantity = 1) => {
-    console.log("Producto agregado:", product, "Cantidad:", quantity);
     setCart((prevCart) => {
       const existingProduct = prevCart.find((item) => item.id === product.id);
       if (existingProduct) {
@@ -23,9 +22,7 @@ export function useCart() {
   };
 
   // Efecto para observar cambios en el carrito
-  useEffect(() => {
-    console.log("Carrito actualizado:", cart);
-  }, [cart]);
+  useEffect(() => {}, [cart]);
 
   // Eliminar un producto del carrito
   const removeFromCart = (productId) => {
