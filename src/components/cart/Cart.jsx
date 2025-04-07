@@ -1,6 +1,6 @@
 import { useCart } from "../../components/cart/CartContext";
 
-import { TiDelete } from "react-icons/ti";
+import { HiOutlineXMark } from "react-icons/hi2";
 
 import { SetAmount } from "../SetAmount/SetAmount";
 import { useState } from "react";
@@ -65,7 +65,7 @@ export function Cart() {
                     console.log("Producto eliminado:", item.id);
                   }}
                 >
-                  <TiDelete />
+                  <HiOutlineXMark />
                   Remover
                 </button>
               </div>
