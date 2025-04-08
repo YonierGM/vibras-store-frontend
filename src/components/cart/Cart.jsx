@@ -83,7 +83,7 @@ export function Cart() {
           </button>
           <div className="Summary">
             <div className="ContentSummary">
-              <h2>Order summary</h2>
+              <h2>Resumen Compra</h2>
               <div className="Items">
                 <div className="OriginalPrice Item">
                   <span>Precio original</span>
@@ -91,7 +91,8 @@ export function Cart() {
                     $
                     {cart
                       .reduce(
-                        (total, item) => total + item.priceBeforeDiscount,
+                        (total, item) =>
+                          total + item.priceBeforeDiscount * item.quantity,
                         0
                       )
                       .toLocaleString("es-ES", {
@@ -107,7 +108,8 @@ export function Cart() {
                       .reduce(
                         (total, item) =>
                           total +
-                          (item.priceBeforeDiscount - item.priceAfterDiscount),
+                          (item.priceBeforeDiscount - item.priceAfterDiscount) *
+                            item.quantity,
                         0
                       )
                       .toLocaleString("es-ES", {
