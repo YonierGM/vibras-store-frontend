@@ -1,0 +1,12 @@
+.busqueda input {
+  height: 30px;
+  width: 100% !important;
+  border: none;
+  border-bottom: 1px solid #0e0e0e;
+  outline: none;
+  transition: 0.4s all ease;
+}
+
+.content {
+  width: 100%;
+}

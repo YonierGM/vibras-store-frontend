@@ -1,7 +1,88 @@
-@media only screen and (max-width: 480px) {
+.CartIcon {
+  position: relative;
+  width: 1.5rem;
+  height: 1.5rem;
+  cursor: pointer;
+}
+
+h1 a {
+  color: black;
+  text-decoration: none;
+}
+
+.Menu {
+  display: none;
+}
+
+.CartIcon svg {
+  width: 100%;
+  height: 100%;
+  color: rgb(0, 0, 0);
+}
+
+.CartIcon .Badge {
+  position: absolute;
+  width: 15px;
+  height: 15x;
+  top: -8px;
+  right: -8px;
+  background: gray;
+  border-radius: 50%;
+}
+
+.CartIcon .Badge span {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 0.7rem;
+}
+
+.CartAside {
+  display: none;
+}
+
+.MostrarCart {
+  display: block;
+}
+
+.Overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 998;
+  pointer-events: all;
+}
+
+.no-scroll {
+  overflow: hidden;
+  height: 100vh;
+  z-index: 999;
+}
+
+.NavHeader h1 {
+  font-size: 1.15rem;
+}
+
+.Icons {
+  display: flex;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+@media only screen and (max-width: 768px) {
+  .Menu {
+    display: block;
+  }
+
   .Icon {
     font-size: 1.5rem;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
   }
 
   .Mostrar {
@@ -22,24 +103,16 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
-    z-index: 998; /* Debe estar detrás del menú pero encima del resto del contenido */
-    pointer-events: all; /* Captura los clics */
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+    pointer-events: all;
   }
   .no-scroll {
-    overflow: hidden; /* Deshabilita el scroll */
-    height: 100vh; /* Evita que el contenido se desplace */
+    overflow: hidden;
+    height: 100vh;
     z-index: 999;
   }
-  .Header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 5%;
-    background: #000000;
-    height: 8vh;
-  }
-  .Content {
+  .Header .Content {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -49,42 +122,14 @@
     background: #f2f4f7;
   }
 
-  .Content h1 {
-    font-size: 1.2rem;
-  }
-  .Logo {
-    display: none;
-  }
-  .Main {
-    display: flex;
-    align-items: center;
-  }
-
   .Nav {
-    position: absolute;
-    height: 100vh !important;
     top: 0vh;
     left: -100%;
+    position: absolute;
+    height: 100vh;
     width: 80%;
-    background: rgb(255, 255, 255);
-    z-index: 1000;
     transition: all 0.3s ease-in-out;
-    overflow: hidden;
-  }
-
-  .CartAside {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    height: 100vh !important;
-    top: 0vh;
-    left: -100%;
-    width: 100%;
-    background: rgb(255, 255, 255);
     z-index: 1000;
-    transition: all 0.3s ease-in-out;
-    overflow-x: hidden;
-    overflow-y: auto;
   }
 
   ul {
@@ -94,6 +139,7 @@
     flex-direction: column;
     gap: 1rem;
     padding-top: 10vh;
+    background: #ffffff;
   }
 
   ul li {
@@ -118,27 +164,132 @@
     font-weight: 400;
   }
 
-  .CartIcon {
-    position: relative;
-  }
-
-  .CartIcon .Badge {
+  .CartAside {
+    display: flex;
+    flex-direction: column;
     position: absolute;
-    width: 16px;
-    height: 16px;
-    top: -8px;
-    right: -8px;
-    background: gray;
-    border-radius: 50%;
+    height: 100vh !important;
+    top: 0vh;
+    left: -100%;
+    width: 100%;
+    background: rgb(255, 255, 255);
+    z-index: 1000;
+    transition: all 0.3s ease-in-out;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .Menu {
+    display: block;
+  }
+  .NavHeader {
+    display: none;
   }
 
-  .CartIcon .Badge span {
+  .CartAside .NavHeader {
+    display: block;
+  }
+
+  .Icon {
+    font-size: 1.5rem;
+    color: rgb(255, 255, 255);
+  }
+
+  .Menu svg {
+    display: none;
+  }
+
+  .MostrarCart {
+    left: 0 !important;
+    top: 0vh;
+    display: block;
+  }
+
+  .Overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+    pointer-events: all;
+  }
+  .no-scroll {
+    overflow: hidden;
+    height: 100vh;
+    z-index: 999;
+  }
+
+  .CartAside {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    height: 100vh !important;
+    top: 0vh;
+    left: -100%;
+    width: 25%;
+    background: rgb(255, 255, 255);
+    z-index: 1000;
+    transition: all 0.3s ease-in-out;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  .Header {
+    width: 100%;
+  }
+
+  .Content {
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .Logo {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
-    font-size: 0.7rem;
+  }
+
+  .Logo img {
+    height: 100%;
+  }
+
+  .Nav ul {
+    gap: 10px;
+    list-style: none;
+    display: flex;
+  }
+
+  ul li {
+    gap: 10px;
+    padding: 10px;
+    list-style: none;
+    display: grid;
+    grid-template-columns: 0.16fr 1fr;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  li:hover {
+    background: rgba(0, 0, 0, 0.1);
+  }
+  li svg {
+    width: 1.1rem;
+    height: 1.1rem;
+  }
+  li a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 1.1rem;
+    font-weight: 400;
   }
 }

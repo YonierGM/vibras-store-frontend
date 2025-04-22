@@ -1,0 +1,27 @@
+.Cards {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.Pagination {
+  width: 100%;
+}
+
+.Filters {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+  .Filters {
+    width: 90%;
+  }
+}

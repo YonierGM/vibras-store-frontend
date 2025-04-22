@@ -1,59 +1,58 @@
-@media only screen and (max-width: 480px) {
-  .CardFooter {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-  }
+.CardFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
 
-  .Stars {
-    display: flex;
-    gap: 5px;
-  }
+.Stars {
+  display: flex;
+  gap: 5px;
+}
 
-  .Stars svg {
-    width: 20px;
-    height: 20px;
-  }
+.Stars svg {
+  width: 20px;
+  height: 20px;
+}
 
-  .Stars .Full {
-    color: #facf19;
-    font-weight: 300;
-  }
+.Stars .Full {
+  color: #facf19;
+  font-weight: 300;
+}
 
-  .Stars .Half {
-    color: #facf19;
-    font-weight: 300;
-  }
+.Stars .Half {
+  color: #facf19;
+  font-weight: 300;
+}
 
-  .Stars .Empty {
-    color: gray;
-    font-weight: 200;
-  }
+.Stars .Empty {
+  color: gray;
+  font-weight: 200;
+}
 
-  .PriceProduct {
-    display: flex;
-    flex-direction: column;
-    align-items: end;
-  }
+.PriceProduct {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
 
-  .PriceProduct .PriceAfterDiscount {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 1.3rem;
-  }
+.PriceProduct .PriceAfterDiscount {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.3rem;
+  font-weight: 300;
+}
 
-  .DiscountPercentage {
-    font-size: 0.8rem;
-    width: 100%;
-    color: #057a55;
-    white-space: nowrap;
-    display: inline-block;
-  }
+.DiscountPercentage {
+  font-size: 0.8rem;
+  width: 100%;
+  color: #057a55;
+  white-space: nowrap;
+  display: inline-block;
+}
 
-  .PriceProduct .PriceBeforeDiscount {
-    text-decoration: line-through;
-    opacity: 0.7;
-    font-size: 0.8rem;
-  }
+.PriceProduct .PriceBeforeDiscount {
+  text-decoration: line-through;
+  opacity: 0.7;
+  font-size: 0.8rem;
 }

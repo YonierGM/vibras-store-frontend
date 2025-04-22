@@ -1,8 +1,9 @@
-@media only screen and (max-width: 480px) {
-  .Cards {
-    padding: 3%;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
+.Layout {
+  width: 100%;
+}
+.MainLayout {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
