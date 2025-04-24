@@ -62,6 +62,7 @@ export function Cart() {
                 </div>
                 <button
                   className="RemoveButton"
+                  name="remove"
                   onClick={() => {
                     removeFromCart(item.id);
                     console.log("Producto eliminado:", item.id);
@@ -77,7 +78,7 @@ export function Cart() {
       </div>
       {cart.length > 0 && (
         <>
-          <button className="EmptyCart Button" onClick={clearCart}>
+          <button className="EmptyCart Button" onClick={clearCart} name="clear">
             <TbTrashFilled />
             Vaciar carrito
           </button>
@@ -130,7 +131,7 @@ export function Cart() {
               </div>
             </div>
             <div className="Checkout">
-              <button className="CheckoutButton Button">
+              <button className="CheckoutButton Button" name="checkout">
                 <AiFillCreditCard />
                 Pagar
               </button>

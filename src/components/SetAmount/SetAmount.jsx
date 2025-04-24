@@ -10,12 +10,18 @@ import "./SetAmount.css";
 export function SetAmount({ amount, onAdd, onSubtract }) {
   return (
     <div className="SetAmount">
-      <button>
-        <HiMinusSmall onClick={onSubtract} />
+      <button name="subtract" onClick={onSubtract} aria-label="Restar cantidad">
+        <HiMinusSmall />
       </button>
-      <input type="number" min={1} value={amount} readOnly />
-      <button>
-        <HiPlusSmall onClick={onAdd} />
+      <input
+        type="number"
+        min={1}
+        value={amount}
+        readOnly
+        aria-label="Cantidad de producto"
+      />
+      <button name="add" onClick={onAdd} aria-label="Sumar cantidad">
+        <HiPlusSmall />
       </button>
     </div>
   );

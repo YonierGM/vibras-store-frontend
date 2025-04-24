@@ -8,7 +8,7 @@ import "./ProductList.css";
 
 export function ProductList() {
   const [page, setPage] = useState(1); // Estado para la página actual
-  const limit = 10; // Número de productos por página
+  const limit = 30; // Número de productos por página
   const skip = (page - 1) * limit; // Calcula el valor de `skip` basado en la página actual
 
   // Pasa la URL con los parámetros de paginación al hook
@@ -45,37 +45,37 @@ export function ProductList() {
 
   return (
     <>
-      <section className="Filters">
-        <ProductFilters
-          products={products}
-          setFilteredProducts={setFilteredProducts}
-        />
-      </section>
-      <div className="Cards">
-        {(filteredProducts.length ? filteredProducts : products).map(
-          (product) => (
-            <Card
-              id={product.id}
-              key={product.id}
-              image={product.images[0]}
-              title={product.title}
-              rating={product.rating}
-              price={product.price}
-              discountPercentage={product.discountPercentage}
-              priceAfterDiscount={product.priceAfterDiscount}
-              priceBeforeDiscount={product.priceBeforeDiscount}
-              description={product.description}
-            />
-          )
-        )}
-      </div>
-      <section className="Pagination">
+      <div className="Main-content">
+        <section className="Filters">
+          <ProductFilters
+            products={products}
+            setFilteredProducts={setFilteredProducts}
+          />
+        </section>
+        <div className="Cards">
+          {(filteredProducts.length ? filteredProducts : products).map(
+            (product) => (
+              <Card
+                id={product.id}
+                key={product.id}
+                image={product.images[0]}
+                title={product.title}
+                rating={product.rating}
+                price={product.price}
+                discountPercentage={product.discountPercentage}
+                priceAfterDiscount={product.priceAfterDiscount}
+                priceBeforeDiscount={product.priceBeforeDiscount}
+                description={product.description}
+              />
+            )
+          )}
+        </div>
         <Pagination
           totalItems={data?.total || 0}
           itemsPerPage={limit}
           onPageChange={handlePageChange}
         />
-      </section>
+      </div>
     </>
   );
 }

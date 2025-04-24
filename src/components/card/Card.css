@@ -2,14 +2,14 @@
   margin: 0;
   padding: 0;
 }
-.CardBody h2 {
+.CardBody h1 {
   width: 300px;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 1;
   line-clamp: 1;
   overflow: hidden;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .Card {
@@ -17,11 +17,12 @@
   flex-direction: column;
   padding: 2%;
   border: 1px solid rgba(224, 224, 224, 0.4);
+  cursor: pointer;
 }
 
 .CardHeader {
   width: 100%;
-  height: 300px;
+  height: 200px;
 }
 
 .CardHeader img {
@@ -35,9 +36,14 @@
   flex-direction: column;
   gap: 10px;
 }
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 768px) {
   .Card {
     width: 90%;
+  }
+
+  .CardBody h1 {
+    width: 100%;
+    font-size: 1.2rem;
   }
 }
 @media only screen and (min-width: 768px) {

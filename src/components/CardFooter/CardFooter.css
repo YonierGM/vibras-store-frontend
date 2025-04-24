@@ -4,31 +4,6 @@
   align-items: flex-end;
 }
 
-.Stars {
-  display: flex;
-  gap: 5px;
-}
-
-.Stars svg {
-  width: 20px;
-  height: 20px;
-}
-
-.Stars .Full {
-  color: #facf19;
-  font-weight: 300;
-}
-
-.Stars .Half {
-  color: #facf19;
-  font-weight: 300;
-}
-
-.Stars .Empty {
-  color: gray;
-  font-weight: 200;
-}
-
 .PriceProduct {
   display: flex;
   flex-direction: column;

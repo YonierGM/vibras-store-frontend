@@ -12,6 +12,7 @@ import { FaCartShopping } from "react-icons/fa6";
 import "./ProductDetail.css";
 import { Cart } from "../cart/Cart";
 import { Spinner } from "../spinner/Spinner";
+import { Review } from "../review/Review";
 
 export function ProductDetail() {
   const { id } = useParams();
@@ -52,16 +53,19 @@ export function ProductDetail() {
       <div className="ContentDetail">
         <div className="Images">
           <div className="Principal">
-            <img src={image} alt={product.title} />
+            <img src={image} alt="Imagen producto" />
           </div>
           <div className="Galeria">
             {product.images.map((img, index) => (
               <img
-                onClick={() => setImage(img)}
+                onClick={() => {
+                  setImage(img);
+                  console.log("hola");
+                }}
                 className={img === image ? "active" : ""}
                 key={index}
                 src={img}
-                alt={`${product.title} ${index}`}
+                alt="imagen producto"
               />
             ))}
           </div>
@@ -69,6 +73,16 @@ export function ProductDetail() {
         <div className="Info">
           <h1>{product.title}</h1>
           <p>{product.description}</p>
+          <div className="Detail">
+            <p>{product.warrantyInformation}</p>
+            {/* <p>
+              <strong>shipping:</strong> {product.shippingInformation}
+            </p>
+            <p>
+              <strong>Stock:</strong> {product.availabilityStatus}
+            </p> */}
+            <p>{product.returnPolicy}</p>
+          </div>
           <CardFooter
             rating={product.rating}
             price={product.price}
@@ -77,7 +91,7 @@ export function ProductDetail() {
             priceBeforeDiscount={product.priceBeforeDiscount}
           />
           <div className="Buy">
-            <button className="Button">
+            <button className="Button" name="buy">
               <AiFillCreditCard />
               Comprar
             </button>
@@ -92,6 +106,7 @@ export function ProductDetail() {
                   addToCart(product, amount);
                 }}
                 className="AddToCart Button"
+                name="addToCart"
               >
                 <FaCartShopping />
                 Agregar al carrito
@@ -100,6 +115,8 @@ export function ProductDetail() {
           </div>
         </div>
       </div>
+      <hr className="detail-hr" />
+      <Review product={product} />
     </>
   );
 }

@@ -1,3 +1,70 @@
+.ContentDetail {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 3%;
+}
+.detail-hr {
+  width: 100%;
+  height: 2px;
+  background-color: #f2f4f7;
+}
+
+.Images {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.Principal {
+  height: 40vh;
+  display: flex;
+  justify-content: center;
+  border: 1px solid rgba(199, 199, 199, 0.2);
+  border-radius: 10px;
+}
+
+.Principal img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.Galeria {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.Galeria img {
+  width: 60px;
+  height: 100%;
+  object-fit: contain;
+}
+
+.Galeria img {
+  cursor: pointer;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.Galeria img:hover {
+  opacity: 1;
+}
+
+.Galeria img.active {
+  border: 1px solid rgba(27, 27, 27, 0.5); /* Resalta la imagen seleccionada */
+  opacity: 1;
+}
+
+.Info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
 .Buy {
   display: flex;
   flex-direction: column;
@@ -15,130 +82,14 @@
   grid-template-columns: 0.4fr 1fr;
   gap: 20px;
 }
-@media only screen and (max-width: 768px) {
-  .ContentDetail {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 3%;
-  }
-  .Images {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .Principal {
-    height: 40vh;
-    display: flex;
-    justify-content: center;
-  }
-
-  .Principal img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-  }
-
-  .Galeria {
-    width: 100%;
-    height: 80px;
-    display: flex;
-    justify-content: flex-start;
-    gap: 10px;
-    z-index: -1;
-  }
-
-  .Galeria img {
-    min-width: 60px;
-    width: 100px;
-    height: 100%;
-    object-fit: contain;
-  }
-
-  .Galeria img {
-    cursor: pointer;
-    opacity: 0.8;
-    transition: opacity 0.3s ease;
-  }
-
-  .Galeria img:hover {
-    opacity: 1;
-  }
-
-  .Galeria img.active {
-    border: 1px solid rgba(27, 27, 27, 0.5); /* Resalta la imagen seleccionada */
-    opacity: 1;
-  }
-
-  .Info {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-}
 
 @media only screen and (min-width: 768px) {
   .ContentDetail {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    padding: 3%;
   }
 
-  .Images {
-    display: grid;
-    grid-template-columns: 1fr 0.2fr;
-    gap: 10px;
-  }
-
-  .Principal {
-    height: 40vh;
-    display: flex;
-    justify-content: center;
-  }
-
-  .Principal img {
+  .Info {
     width: 100%;
-    height: 100%;
-    object-fit: contain;
-  }
-
-  .Galeria {
-    width: 80px;
-    height: 80px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    gap: 10px;
-    z-index: -1;
-  }
-
-  .Galeria img {
-    min-width: 60px;
-    width: 80px;
-    height: 80px;
-    object-fit: contain;
-
-    cursor: pointer;
-    opacity: 0.8;
-    transition: opacity 0.3s ease;
-  }
-
-  .Galeria img:hover {
-    opacity: 1;
-  }
-
-  .Galeria img.active {
-    border: 1px solid rgba(27, 27, 27, 0.5); /* Resalta la imagen seleccionada */
-    opacity: 1;
-  }
-
-  .AddCart {
-    width: 100%;
-    height: 50px;
-    display: grid;
-    grid-template-columns: 0.4fr 1fr;
-    gap: 20px;
   }
 }
