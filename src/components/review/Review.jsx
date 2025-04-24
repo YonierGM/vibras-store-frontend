@@ -45,10 +45,7 @@ export function Review() {
                 <div className="review_card_profile">
                   <div className="review_card_prodile_image">
                     <div className="image">
-                      <img
-                        src="../../src/assets/user-profile.jpg"
-                        alt="Perfil Usuario"
-                      />
+                      <img src="/user-profile.jpg" alt="Perfil Usuario" />
                     </div>
                     <span>{review.reviewerName}</span>
                   </div>
