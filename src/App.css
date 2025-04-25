@@ -1,7 +1,7 @@
 .Layout {
   width: 100%;
   display: grid;
-  grid-template-rows: 10vh auto auto;
+  grid-template-rows: 10vh auto 30vh;
 }
 
 .HeaderLayout {
@@ -10,7 +10,7 @@
 
 .FooterLayout {
   width: 100%;
-  min-height: 300px;
+  height: 100%;
   padding: 20px 0;
   display: flex;
   justify-content: center;
