@@ -55,11 +55,7 @@ function ProductDetail() {
       <div className="ContentDetail">
         <div className="Images">
           <div className="Principal">
-            <img
-              src={optimizedImage || image}
-              alt="Imagen producto"
-              loading="lazy"
-            />
+            <img src={optimizedImage || image} alt="Imagen producto" />
           </div>
           <div className="Galeria">
             {product.images.map((img, index) => (
