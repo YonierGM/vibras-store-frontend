@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { CartProvider } from "./components/cart/CartContext";
 
-import { Toaster } from "react-hot-toast";
+// import { Toaster } from "react-hot-toast";
 
 import "./App.css";
 import { ProductList } from "./pages/ProductList/ProductList";
@@ -13,7 +13,7 @@ import { Home } from "./pages/Home/Home";
 function App() {
   return (
     <>
-      <Toaster position="button-right" reverseOrder={false} />
+      {/* <Toaster position="button-right" reverseOrder={false} /> */}
       <section className="Layout">
         <CartProvider>
           <BrowserRouter>
