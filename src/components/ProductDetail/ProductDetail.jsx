@@ -14,7 +14,7 @@ import { Cart } from "../cart/Cart";
 import { Spinner } from "../spinner/Spinner";
 import { Review } from "../review/Review";
 
-export function ProductDetail() {
+function ProductDetail() {
   const { id } = useParams();
   const { addToCart } = useCart();
   const { product, loading } = useProduct(id);
@@ -120,3 +120,5 @@ export function ProductDetail() {
     </>
   );
 }
+
+export default ProductDetail;

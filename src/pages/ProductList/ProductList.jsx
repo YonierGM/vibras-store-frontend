@@ -6,7 +6,7 @@ import { Pagination } from "../../components/pagination/Pagination";
 import { ProductFilters } from "../../components/filters/Filters";
 import "./ProductList.css";
 
-export function ProductList() {
+function ProductList() {
   const [page, setPage] = useState(1); // Estado para la página actual
   const limit = 30; // Número de productos por página
   const skip = (page - 1) * limit; // Calcula el valor de `skip` basado en la página actual
@@ -79,3 +79,5 @@ export function ProductList() {
     </>
   );
 }
+
+export default ProductList;

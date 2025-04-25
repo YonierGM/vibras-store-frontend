@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Home.css";
 
-export function Home() {
+function Home() {
   return (
     <>
       <div className="home">
@@ -20,3 +20,4 @@ export function Home() {
     </>
   );
 }
+export default Home;

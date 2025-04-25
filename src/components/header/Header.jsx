@@ -12,7 +12,8 @@ import { MdOutlineContactSupport } from "react-icons/md";
 import { useCart } from "../cart/CartContext";
 import "./Header.css";
 import { Cart } from "../cart/Cart";
-export function Header() {
+
+function Header() {
   const [menu, setMenu] = useState(false);
   const [cartMenu, setCart] = useState(false); // Estado para el carrito
 
@@ -108,3 +109,5 @@ export function Header() {
     </header>
   );
 }
+
+export default Header;
