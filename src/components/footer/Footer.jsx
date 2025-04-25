@@ -35,6 +35,8 @@ export function Footer() {
               href="https://github.com/YonierGM"
               target="_blank"
               rel="noopener noreferrer"
+              name="perfil-github"
+              className="github"
             >
               <FaGithubSquare />
             </a>
@@ -44,6 +46,8 @@ export function Footer() {
               href="https://www.linkedin.com/in/yoniergm/"
               target="_blank"
               rel="noopener noreferrer"
+              name="perfil-linkedin"
+              className="linkedin"
             >
               <FaLinkedin />
             </a>
