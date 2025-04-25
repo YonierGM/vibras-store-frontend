@@ -12,11 +12,11 @@ export function Footer() {
     <footer className="footer">
       <div className="footer-info">
         <div className="location footer-info-item">
-          <IoLocationSharp style={{ width: "24px", height: "24px" }} />
+          <IoLocationSharp />
           <p>Buenaventura, Colombia</p>
         </div>
         <div className="phone footer-info-item">
-          <FaPhone style={{ width: "24px", height: "24px" }} />
+          <FaPhone />
           <p>(+57)00000000</p>
         </div>
       </div>
@@ -39,7 +39,7 @@ export function Footer() {
               name="perfil-GitHub"
               className="github"
             >
-              <FaGithubSquare style={{ width: "24px", height: "24px" }} />
+              <FaGithubSquare />
             </a>
           </div>
           <div className="social">
@@ -51,7 +51,7 @@ export function Footer() {
               name="perfil-linkedin"
               className="linkedin"
             >
-              <FaLinkedin style={{ width: "24px", height: "24px" }} />
+              <FaLinkedin />
             </a>
           </div>
         </div>
