@@ -43,12 +43,6 @@
   font-size: 2rem;
 }
 
-.icon-footer {
-  width: 20px;
-  height: 20px;
-  font-size: 1.6rem;
-}
-
 .footer-info {
   display: flex;
   flex-direction: column;
@@ -67,11 +61,5 @@
 @media only screen and (max-width: 768px) {
   .footer {
     grid-template-columns: 1fr;
-  }
-  .icon-footer {
-    font-size: 1.4rem;
-  }
-  .social a {
-    font-size: 1.8rem;
   }
 }
