@@ -18,7 +18,17 @@ export function Card({
   return (
     <div className="Card" onClick={() => navigate(`/product/${id}`)}>
       <div className="CardHeader">
-        <img src="/user-profile.webp" alt="Imagen producto" />
+        <img
+          src={image} // Imagen predeterminada
+          srcSet={`
+            ${image}?w=300 300w, 
+            ${image}?w=600 600w, 
+            ${image}?w=900 900w
+          `}
+          sizes="(max-width: 768px) 300px, (max-width: 1200px) 600px, 900px"
+          alt="Imagen producto"
+          loading="lazy" // Carga diferida
+        />
       </div>
       <div className="CardBody">
         <h1>{title}</h1>
