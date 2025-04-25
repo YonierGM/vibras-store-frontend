@@ -10,7 +10,7 @@ import "./Footer.css"; // Importa el archivo CSS para estilos del footer
 export function Footer() {
   return (
     <footer className="footer">
-      {/* <div className="footer-info">
+      <div className="footer-info">
         <div className="location footer-info-item">
           <IoLocationSharp />
           <p>Buenaventura, Colombia</p>
@@ -55,7 +55,7 @@ export function Footer() {
             </a>
           </div>
         </div>
-      </div> */}
+      </div>
     </footer>
   );
 }
