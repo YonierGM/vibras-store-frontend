@@ -1,9 +1,8 @@
 import { createContext, useContext, useState, useEffect } from "react";
-import toast from "react-hot-toast";
-
+import toast, { Toaster } from "react-hot-toast";
 const CartContext = createContext();
 
-function CartProvider({ children }) {
+export function CartProvider({ children }) {
   // Inicializa el carrito desde localStorage o como un array vacío
   const [cart, setCart] = useState(() => {
     const storedCart = localStorage.getItem("cart");
@@ -19,6 +18,7 @@ function CartProvider({ children }) {
     const existingProduct = cart.find((item) => item.id === product.id);
 
     if (existingProduct) {
+      // Llama a toast.success antes de actualizar el estado
       toast.success(
         `¡Cantidad actualizada! Ahora tienes ${
           existingProduct.quantity + quantity
@@ -33,19 +33,20 @@ function CartProvider({ children }) {
         )
       );
     } else {
+      // Llama a toast.success antes de actualizar el estado
       toast.success(`¡${product.title} agregado al carrito!`);
 
       setCart((prevCart) => [...prevCart, { ...product, quantity }]);
     }
   };
 
-  const updateQuantity = (productId, newQuantity) => {
+  function updateQuantity(productId, newQuantity) {
     setCart((prevCart) =>
       prevCart.map((item) =>
         item.id === productId ? { ...item, quantity: newQuantity } : item
       )
     );
-  };
+  }
 
   const removeFromCart = (productId) => {
     console.log("Producto eliminado:", productId);
@@ -78,8 +79,6 @@ function CartProvider({ children }) {
     </CartContext.Provider>
   );
 }
-
-export default CartProvider;
 
 export function useCart() {
   return useContext(CartContext);
