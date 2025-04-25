@@ -1,5 +1,4 @@
 import React from "react";
-import "./Footer.css"; // Importa el archivo CSS para estilos del footer
 
 import { FaGithubSquare } from "react-icons/fa";
 
@@ -7,6 +6,7 @@ import { FaLinkedin } from "react-icons/fa";
 import { IoLocationSharp } from "react-icons/io5";
 import { FaPhone } from "react-icons/fa6";
 
+import "./Footer.css"; // Importa el archivo CSS para estilos del footer
 export function Footer() {
   return (
     <footer className="footer">
