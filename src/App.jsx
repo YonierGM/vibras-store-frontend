@@ -1,7 +1,7 @@
 import React, { lazy, Suspense } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { CartProvider } from "./components/cart/CartContext";
-const Toaster = lazy(() => import("react-hot-toast"));
+import { Toaster } from "react-hot-toast";
 import "./App.css";
 
 // Asegúrate de que estos componentes tengan export default
@@ -20,9 +20,9 @@ function App() {
         <CartProvider>
           <BrowserRouter>
             <div className="HeaderLayout">
-              <Suspense fallback={<div>Cargando header...</div>}>
+              {/* <Suspense fallback={<div>Cargando header...</div>}>
                 <Header />
-              </Suspense>
+              </Suspense> */}
             </div>
             <div className="MainLayout">
               <Suspense fallback={<div>Cargando página...</div>}>
