@@ -20,11 +20,7 @@ export function Card({
   return (
     <div className="Card" onClick={() => navigate(`/product/${id}`)}>
       <div className="CardHeader">
-        <img
-          src={optimizedImage || image}
-          alt="Imagen producto"
-          loading="lazy"
-        />
+        <img src={optimizedImage || image} alt="Imagen producto" />
       </div>
       <div className="CardBody">
         <h1>{title}</h1>
