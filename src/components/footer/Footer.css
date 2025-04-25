@@ -44,11 +44,9 @@
 }
 
 .icon-footer {
-  font-size: 1.6rem;
-}
-
-.phone .icon-footer {
   width: 20px;
+  height: 20px;
+  font-size: 1.6rem;
 }
 
 .footer-info {

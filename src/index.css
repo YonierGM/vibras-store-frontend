@@ -4,50 +4,62 @@
 @font-face {
   font-family: PoppinsBlack;
   src: url("./assets/Poppins/Poppins-Black.ttf");
+  font-display: swap;
 }
 @font-face {
   font-family: PoppinsBlackItalic;
   src: url("./assets/Poppins/Poppins-BlackItalic.ttf");
+  font-display: swap;
 }
 @font-face {
   font-family: PoppinsBold;
   src: url("./assets/Poppins/Poppins-Bold.ttf");
+  font-display: swap;
 }
 @font-face {
   font-family: PoppinsBoldItalic;
   src: url("./assets/Poppins/Poppins-BoldItalic.ttf");
+  font-display: swap;
 }
 @font-face {
   font-family: PoppinsExtraBold;
   src: url("./assets/Poppins/Poppins-ExtraBold.ttf");
+  font-display: swap;
 }
 @font-face {
   font-family: PoppinsExtraBoldItalic;
   src: url("./assets/Poppins/Poppins-ExtraBoldItalic.ttf");
+  font-display: swap;
 }
 @font-face {
   font-family: PoppinsExtraLight;
   src: url("./assets/Poppins/Poppins-ExtraLight.ttf");
+  font-display: swap;
 }
 @font-face {
   font-family: PoppinsItalic;
   src: url("./assets/Poppins/Poppins-Italic.ttf");
+  font-display: swap;
 }
 @font-face {
   font-family: PoppinsLight;
   src: url("./assets/Poppins/Poppins-Light.ttf");
+  font-display: swap;
 }
 @font-face {
   font-family: PoppinsThin;
   src: url("./assets/Poppins/Poppins-Thin.ttf");
+  font-display: swap;
 }
 @font-face {
   font-family: PoppinsSemiBold;
   src: url("./assets/Poppins/Poppins-SemiBold.ttf");
+  font-display: swap;
 }
 @font-face {
   font-family: PoppinsMedium;
   src: url("./assets/Poppins/Poppins-Medium.ttf");
+  font-display: swap;
 }
 
 a {

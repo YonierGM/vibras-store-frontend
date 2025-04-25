@@ -39,7 +39,7 @@ export function Footer() {
               name="perfil-GitHub"
               className="github"
             >
-              <FaGithubSquare />
+              <FaGithubSquare className="icon-footer" />
             </a>
           </div>
           <div className="social">
@@ -51,7 +51,7 @@ export function Footer() {
               name="perfil-linkedin"
               className="linkedin"
             >
-              <FaLinkedin />
+              <FaLinkedin className="icon-footer" />
             </a>
           </div>
         </div>
