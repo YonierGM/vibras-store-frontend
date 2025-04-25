@@ -71,4 +71,8 @@
     background-size: cover;
     background-position: center;
   }
+
+  .Button-buy {
+    font-size: 0.9rem;
+  }
 }

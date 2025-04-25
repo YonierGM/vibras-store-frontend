@@ -16,7 +16,10 @@ function Home() {
               Explora nuestros productos y ofertas especiales.
             </p>
           </div>
-          <button className="Button Button-buy" name="buy">
+          <button
+            className="Button Button-buy"
+            aria-label="Ir a la página de productos para comprar"
+          >
             <Link to="/products">Comprar ahora</Link>
           </button>
         </section>
