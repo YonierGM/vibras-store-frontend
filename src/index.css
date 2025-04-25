@@ -1,7 +1,7 @@
 /* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;700&display=swap");
 */
 
-@font-face {
+/* @font-face {
   font-family: PoppinsBlack;
   src: url("./assets/Poppins/Poppins-Black.ttf");
   font-display: swap;
@@ -80,7 +80,7 @@ h1,
 h2 {
   font-family: PoppinsBold;
   color: rgba(0, 0, 0, 0.9);
-}
+} */
 
 hr {
   border: none;
