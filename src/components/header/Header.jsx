@@ -41,7 +41,11 @@ function Header() {
         <section className="Logo">
           <h1>
             {" "}
-            <Link to="/products" onClick={() => isMobile() && setMenu(false)}>
+            <Link
+              className="logo-name"
+              to="/products"
+              onClick={() => isMobile() && setMenu(false)}
+            >
               Vibras Store
             </Link>
           </h1>

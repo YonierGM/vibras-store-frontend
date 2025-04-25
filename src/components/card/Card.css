@@ -9,7 +9,7 @@
   -webkit-line-clamp: 1;
   line-clamp: 1;
   overflow: hidden;
-  font-weight: 700;
+  font-weight: bold;
 }
 
 .Card {

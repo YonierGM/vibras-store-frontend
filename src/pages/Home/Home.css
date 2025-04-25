@@ -15,7 +15,8 @@
   width: 40%;
   padding: 3%;
 }
-.home-container-info {
+.home-container-info .home-container-info-p,
+.home-container-info-h1 {
   display: flex;
   flex-direction: column;
   gap: 20px;

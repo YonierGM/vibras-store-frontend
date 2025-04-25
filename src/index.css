@@ -1,15 +1,80 @@
 /* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;700&display=swap");
+*/
 
-:root {
-  font-family: "Poppins", Arial, sans-serif;
-  font-weight: 200;
-  font-style: normal;
+@font-face {
+  font-family: PoppinsBlack;
+  src: url("./assets/Poppins/Poppins-Black.ttf");
+}
+@font-face {
+  font-family: PoppinsBlackItalic;
+  src: url("./assets/Poppins/Poppins-BlackItalic.ttf");
+}
+@font-face {
+  font-family: PoppinsBold;
+  src: url("./assets/Poppins/Poppins-Bold.ttf");
+}
+@font-face {
+  font-family: PoppinsBoldItalic;
+  src: url("./assets/Poppins/Poppins-BoldItalic.ttf");
+}
+@font-face {
+  font-family: PoppinsExtraBold;
+  src: url("./assets/Poppins/Poppins-ExtraBold.ttf");
+}
+@font-face {
+  font-family: PoppinsExtraBoldItalic;
+  src: url("./assets/Poppins/Poppins-ExtraBoldItalic.ttf");
+}
+@font-face {
+  font-family: PoppinsExtraLight;
+  src: url("./assets/Poppins/Poppins-ExtraLight.ttf");
+}
+@font-face {
+  font-family: PoppinsItalic;
+  src: url("./assets/Poppins/Poppins-Italic.ttf");
+}
+@font-face {
+  font-family: PoppinsLight;
+  src: url("./assets/Poppins/Poppins-Light.ttf");
+}
+@font-face {
+  font-family: PoppinsThin;
+  src: url("./assets/Poppins/Poppins-Thin.ttf");
+}
+@font-face {
+  font-family: PoppinsSemiBold;
+  src: url("./assets/Poppins/Poppins-SemiBold.ttf");
+}
+@font-face {
+  font-family: PoppinsMedium;
+  src: url("./assets/Poppins/Poppins-Medium.ttf");
+}
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-} */
+a {
+  font-family: PoppinsLight;
+}
+
+.logo-name {
+  font-family: PoppinsBold;
+}
+
+P,
+q,
+span {
+  font-family: PoppinsLight;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.DiscountPercentage p {
+  font-family: PoppinsMedium !important;
+  color: rgb(46, 139, 87);
+}
+
+h1,
+h2 {
+  font-family: PoppinsBold;
+  color: rgba(0, 0, 0, 0.9);
+}
 
 hr {
   border: none;

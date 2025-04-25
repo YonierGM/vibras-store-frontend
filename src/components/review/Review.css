@@ -30,7 +30,7 @@
 .review__card {
   display: flex;
   flex-direction: column;
-  background: #f2f4f7;
+  background: rgba(242, 244, 247, 0.5);
   border-radius: 20px;
   padding: 3%;
   gap: 10px;
@@ -81,6 +81,7 @@
 } */
 .rating-star {
   display: flex;
+  justify-content: center;
   align-items: center;
   gap: 15px;
 }
@@ -91,6 +92,15 @@
 }
 
 @media only screen and (max-width: 768px) {
+  .rating-star {
+    gap: 10px;
+  }
+
+  .rating-star .rating-number {
+    font-size: 2.5rem;
+    font-weight: 500;
+  }
+
   .review_content {
     display: grid;
     grid-template-columns: 1fr;
