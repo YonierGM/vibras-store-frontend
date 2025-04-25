@@ -1,6 +1,7 @@
 .Layout {
   width: 100%;
   display: grid;
+  grid-template-rows: 10vh auto 10vh;
 }
 
 .HeaderLayout {
