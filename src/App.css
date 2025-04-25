@@ -1,19 +1,9 @@
 .Layout {
   width: 100%;
   display: grid;
-  grid-template-rows: 10vh 90vh 30vh;
+  grid-template-rows: 10vh auto 10vh;
 }
 
 .HeaderLayout {
   width: 100%;
-}
-
-.FooterLayout {
-  width: 100%;
-  height: 100%;
-  padding: 20px 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #f2f4f7;
 }
