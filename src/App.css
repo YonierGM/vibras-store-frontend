@@ -1,19 +1,9 @@
 .Layout {
   width: 100%;
   display: grid;
-  grid-template-rows: 10vh 1fr 30vh;
-}
-
-.MainLayout {
-  width: 100%;
-  display: grid;
-  grid-template-rows: 1fr;
+  grid-template-rows: 10vh 1fr 300px;
 }
 
 .HeaderLayout {
-  width: 100%;
-}
-
-.FooterLayout {
   width: 100%;
 }
