@@ -18,7 +18,7 @@ export function Card({
   return (
     <div className="Card" onClick={() => navigate(`/product/${id}`)}>
       <div className="CardHeader">
-        <img src={image} alt="Imagen producto" />
+        <img src="/user-profile.jpg" alt="Imagen producto" />
       </div>
       <div className="CardBody">
         <h1>{title}</h1>
