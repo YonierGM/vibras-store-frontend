@@ -1,0 +1,79 @@
+.footer {
+  width: 90%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.footer h1 {
+  text-align: center;
+}
+
+.footer-copy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-about-company {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.social a,
+.icon-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+}
+.social a {
+  font-size: 2rem;
+}
+
+.icon-footer {
+  font-size: 1.6rem;
+}
+
+.phone .icon-footer {
+  width: 20px;
+}
+
+.footer-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer-info .footer-info-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+  .footer {
+    grid-template-columns: 1fr;
+  }
+  .icon-footer {
+    font-size: 1.4rem;
+  }
+  .social a {
+    font-size: 1.8rem;
+  }
+}
