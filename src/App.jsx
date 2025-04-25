@@ -29,7 +29,7 @@ function App() {
                 <Route path="/product/:id" element={<ProductDetail />}></Route>
               </Routes>
             </div>
-            <div className="FooterLayout">
+            <div>
               <Footer />
             </div>
           </BrowserRouter>
