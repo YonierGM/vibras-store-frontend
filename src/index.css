@@ -1,4 +1,4 @@
-/* :root {
+:root {
   font-family: "Poppins", Arial, sans-serif;
   font-weight: 200;
   font-style: normal;
@@ -7,7 +7,7 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-} */
+}
 
 hr {
   border: none;
