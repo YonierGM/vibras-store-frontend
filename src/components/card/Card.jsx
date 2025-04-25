@@ -1,13 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { CardFooter } from "../CardFooter/CardFooter";
+import { useOptimizedImage } from "../../hooks/useCloudinary";
 import "./Card.css";
-
-// Función para optimizar imagenes vía Cloudinary
-const getOptimizedImage = (url, width = 400) => {
-  return `https://res.cloudinary.com/dixepglqi/image/fetch/w_${width},q_auto,f_auto/${encodeURIComponent(
-    url
-  )}`;
-};
 
 export function Card({
   id,
@@ -21,12 +15,13 @@ export function Card({
   description,
 }) {
   const navigate = useNavigate();
+  const optimizedImage = useOptimizedImage(image);
 
   return (
     <div className="Card" onClick={() => navigate(`/product/${id}`)}>
       <div className="CardHeader">
         <img
-          src={getOptimizedImage(image)}
+          src={optimizedImage || image}
           alt="Imagen producto"
           loading="lazy"
         />

@@ -13,6 +13,7 @@ import "./ProductDetail.css";
 import { Cart } from "../cart/Cart";
 import { Spinner } from "../spinner/Spinner";
 import { Review } from "../review/Review";
+import { useOptimizedImage } from "../../hooks/useCloudinary";
 
 function ProductDetail() {
   const { id } = useParams();
@@ -21,6 +22,7 @@ function ProductDetail() {
 
   const [image, setImage] = useState(null); // Estado para la imagen principal
   const [amount, setAmount] = useState(1); // Estado para la cantidad
+  const optimizedImage = useOptimizedImage(image);
 
   useEffect(() => {
     if (product && product.images) {
@@ -53,7 +55,11 @@ function ProductDetail() {
       <div className="ContentDetail">
         <div className="Images">
           <div className="Principal">
-            <img src={image} alt="Imagen producto" />
+            <img
+              src={optimizedImage || image}
+              alt="Imagen producto"
+              loading="lazy"
+            />
           </div>
           <div className="Galeria">
             {product.images.map((img, index) => (
