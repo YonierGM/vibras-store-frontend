@@ -1,7 +1,7 @@
 import React, { lazy, Suspense } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { CartProvider } from "./components/cart/CartContext";
-import { Toaster } from "react-hot-toast";
+const Toaster = lazy(() => import("react-hot-toast"));
 import "./App.css";
 
 // Asegúrate de que estos componentes tengan export default
