@@ -16,8 +16,8 @@ export function Payment({ name, description, totalAmount }) {
       country: "CO",
       lang: "es",
       external: true, // Asegúrate de que este valor sea true
-      response: "https://store-vibras.vercel.app/", // URL de respuesta
-      confirmation: "https://store-vibras.vercel.app/", // URL de confirmación
+      response: "https://store-vibras.vercel.app/respuesta", // URL de respuesta
+      confirmation: "https://0963-8-242-148-115.ngrok-free.app/confirmation", // URL de confirmación
     };
 
     openCheckout(paymentData);

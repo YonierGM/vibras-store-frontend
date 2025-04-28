@@ -9,7 +9,7 @@ import ProductList from "./pages/ProductList/ProductList";
 import ProductDetail from "./components/ProductDetail/ProductDetail";
 import Header from "./components/header/Header";
 import Home from "./pages/Home/Home";
-import { Footer } from "./components/footer/Footer";
+import { Response } from "./components/checkout/response/Response";
 
 function App() {
   return (
@@ -27,6 +27,7 @@ function App() {
                 <Route path="/home" element={<Home />}></Route>
                 <Route path="/products" element={<ProductList />}></Route>
                 <Route path="/product/:id" element={<ProductDetail />}></Route>
+                <Route path="/respuesta" element={<Response />}></Route>
               </Routes>
             </div>
           </BrowserRouter>
