@@ -6,6 +6,10 @@ export function useCheckout() {
     });
 
     handler.open(data);
+    handler.onClose = function () {
+      // Aquí puedes manejar el cierre del checkout
+      console.log("Checkout cerrado");
+    };
   };
 
   return { openCheckout };
