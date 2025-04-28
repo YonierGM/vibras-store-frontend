@@ -1,13 +1,11 @@
 import { useCart } from "../../components/cart/CartContext";
-
 import { HiOutlineXMark } from "react-icons/hi2";
 import { TbTrashFilled } from "react-icons/tb";
-import { AiFillCreditCard } from "react-icons/ai";
-
 import { SetAmount } from "../SetAmount/SetAmount";
 import { useState } from "react";
-
+import { Payment } from "../../components/checkout/Checkout";
 import "./Cart.css";
+
 export function Cart() {
   const { cart, removeFromCart, getTotal, clearCart, updateQuantity } =
     useCart();
@@ -21,6 +19,11 @@ export function Cart() {
   function subtractAmount() {
     setAmount((prevAmount) => (prevAmount > 1 ? prevAmount - 1 : 1));
   }
+
+  // Calcular los valores para pasar al componente Payment
+  const totalAmount = getTotal();
+  const description = cart.map((item) => item.title).join(", ");
+  const name = "Carrito de Compras";
 
   return (
     <div className="Cart">
@@ -54,9 +57,6 @@ export function Cart() {
                 </div>
               </div>
               <div className="CartItemDetails">
-                {/* <div className="TitleItem">
-                  <h2>{item.title}</h2>
-                </div> */}
                 <div className="DescriptionItem">
                   <p>{item.description}</p>
                 </div>
@@ -123,7 +123,7 @@ export function Cart() {
                   <span>Total</span>
                   <span>
                     $
-                    {getTotal().toLocaleString("es-ES", {
+                    {totalAmount.toLocaleString("es-ES", {
                       useGrouping: true,
                     })}
                   </span>
@@ -131,10 +131,11 @@ export function Cart() {
               </div>
             </div>
             <div className="Checkout">
-              <button className="CheckoutButton Button" name="checkout">
-                <AiFillCreditCard />
-                Pagar
-              </button>
+              <Payment
+                name={name}
+                description={description}
+                totalAmount={totalAmount}
+              />
             </div>
           </div>
         </>
