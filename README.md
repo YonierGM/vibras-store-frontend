@@ -1,12 +1,57 @@
-# React + Vite
+Vibras Store 🛍️
+Vibras Store es una tienda online desarrollada en React que ofrece una experiencia de compra rápida, moderna y responsiva para todo tipo de usuarios.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+✨ Características
+🛒 Listado de productos: Explora una variedad de productos disponibles en la tienda.
 
-Currently, two official plugins are available:
+📄 Paginación: Navega cómodamente entre diferentes páginas de productos.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🔎 Detalle de producto: Visualiza información detallada de cada producto, incluyendo imágenes, descripciones y precios.
 
-## Expanding the ESLint configuration
+🛍️ Carrito de compras: Agrega y gestiona productos fácilmente antes de finalizar tu compra.
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+💳 Integración con Epayco: Realiza pagos seguros de manera rápida a través de la pasarela Epayco.
+
+📱 Responsive Design: Accede cómodamente desde cualquier dispositivo (móvil, tablet o escritorio).
+
+⚡ Experiencia fluida: Interacción rápida y moderna gracias a React y mejores prácticas de desarrollo frontend.
+
+🚀 Tecnologías utilizadas
+React (Vite como bundler)
+
+React Router para navegación de páginas
+
+Context API para gestión de carrito de compras
+
+Epayco SDK/API para procesamiento de pagos
+
+CSS Module y diseño responsivo
+
+Axios para consumo de APIs
+
+Node.js y Express (para la API backend en otros proyectos relacionados)
+
+📸 Capturas de pantalla
+(Opcional: aquí puedes agregar imágenes del sitio una vez desplegado)
+
+📦 Instalación local
+bash
+Copy
+Edit
+# Clonar el repositorio
+git clone git@github.com:YonierGM/vibras-store-frontend.git
+
+# Entrar al proyecto
+cd vibras-store-frontend
+
+# Instalar dependencias
+npm install
+
+# Correr el proyecto en modo desarrollo
+npm run dev
+🌎 Demo en producción
+[(Agrega aquí el enlace si despliegas tu web en Vercel, Netlify, etc.)](https://store-vibras.vercel.app/products)
+
+📬 Contacto
+¿Tienes dudas o sugerencias?
+Contáctame vía LinkedIn: https://www.linkedin.com/in/yoniergm/ o por correo: yoniermosquera55@gmail.com
