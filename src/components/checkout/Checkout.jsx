@@ -16,7 +16,7 @@ export function Payment({ name, description, totalAmount }) {
       country: "CO",
       lang: "es",
       external: true, // Asegúrate de que este valor sea true
-      response: "http://localhost:5173/respuesta", // URL de respuesta
+      response: "https://store-vibras.vercel.app/respuesta", // URL de respuesta
       confirmation: "https://51c1-8-242-148-115.ngrok-free.app/v1/confirmation", // URL de confirmación
     };
 
