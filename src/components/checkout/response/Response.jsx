@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
+import "./Response.css";
 
 export function Response() {
   const location = useLocation();
@@ -7,13 +8,11 @@ export function Response() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  // Obtener el parámetro ref_payco de la URL
   const queryParams = new URLSearchParams(location.search);
   const refPayco = queryParams.get("ref_payco");
 
   useEffect(() => {
     if (refPayco) {
-      // Realizar la solicitud a la API de ePayco
       fetch(`https://secure.epayco.co/validation/v1/reference/${refPayco}`)
         .then((response) => response.json())
         .then((data) => {
@@ -29,33 +28,68 @@ export function Response() {
           setLoading(false);
         });
     } else {
-      setError("No se encontró el parámetro ref_payco en la URL.");
+      setError("No se encontró Información de la compra.");
       setLoading(false);
     }
   }, [refPayco]);
 
-  if (loading) {
-    return <p>Cargando detalles de la transacción...</p>;
-  }
+  if (loading)
+    return <p className="loading">Cargando detalles de la transacción...</p>;
+  if (error) return <p className="error">{error}</p>;
+  if (!transactionDetails)
+    return (
+      <p className="error">No se encontraron detalles de la transacción.</p>
+    );
 
-  if (error) {
-    return <p>Error: {error}</p>;
-  }
-
-  if (!transactionDetails) {
-    return <p>No se encontraron detalles de la transacción.</p>;
-  }
-
-  // Extraer los datos relevantes de la transacción
   const { data } = transactionDetails;
-  const status = data.x_response; // Estado de la transacción
-  const message = data.x_response_reason_text; // Mensaje de la transacción
+  const getStatusClass = () => {
+    switch (data.x_response?.toLowerCase()) {
+      case "aprobada":
+        return "status success";
+      case "rechazada":
+        return "status error";
+      case "pendiente":
+        return "status pending";
+      default:
+        return "status unknown";
+    }
+  };
 
   return (
-    <div>
-      <h1>Estado de la Transacción</h1>
-      <p>Estado: {status}</p>
-      <p>Mensaje: {message}</p>
+    <div className="response-container">
+      <h1 className="title">🧾 Detalles de la Transacción</h1>
+      <div className={getStatusClass()}>
+        <p>
+          <strong>Referencia de Pago:</strong> {data.x_ref_payco}
+        </p>
+        <p>
+          <strong>Factura:</strong> {data.x_id_invoice}
+        </p>
+        <p>
+          <strong>Estado:</strong> {data.x_response}
+        </p>
+        <p>
+          <strong>Mensaje:</strong> {data.x_response_reason_text}
+        </p>
+        <p>
+          <strong>Monto:</strong> ${data.x_amount}
+        </p>
+        <p>
+          <strong>Nombre:</strong> {data.x_customer_name}
+        </p>
+        <p>
+          <strong>Correo:</strong> {data.x_email_billing}
+        </p>
+        <p>
+          <strong>Teléfono:</strong> {data.x_customer_phone}
+        </p>
+        <p>
+          <strong>Fecha:</strong> {data.x_transaction_date}
+        </p>
+      </div>
+      <a href="/" className="home-button">
+        Volver a la tienda 🛍️
+      </a>
     </div>
   );
 }
