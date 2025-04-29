@@ -42,6 +42,7 @@ export function Response() {
     );
 
   const { data } = transactionDetails;
+  console.log("Detalles de la transacción:", data);
   const getStatusClass = () => {
     switch (data.x_response?.toLowerCase()) {
       case "aprobada":
@@ -73,15 +74,6 @@ export function Response() {
         </p>
         <p>
           <strong>Monto:</strong> ${data.x_amount}
-        </p>
-        <p>
-          <strong>Nombre:</strong> {data.x_customer_name}
-        </p>
-        <p>
-          <strong>Correo:</strong> {data.x_email_billing}
-        </p>
-        <p>
-          <strong>Teléfono:</strong> {data.x_customer_phone}
         </p>
         <p>
           <strong>Fecha:</strong> {data.x_transaction_date}
