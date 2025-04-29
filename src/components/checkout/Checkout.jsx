@@ -25,7 +25,6 @@ export function Payment({ name, description, totalAmount }) {
 
   return (
     <div>
-      <h1>Pago con ePayco</h1>
       <button onClick={payNow} className="Button">
         <AiFillCreditCard />
         Pagar ahora
