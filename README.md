@@ -1,5 +1,5 @@
 # Vibras Store 🛍️
-
+Enlace: https://store-vibras.vercel.app/products
 Vibras Store es una tienda online desarrollada en **React** que ofrece una experiencia de compra rápida, moderna y responsiva para todo tipo de usuarios.
 
 ## ✨ Características
@@ -21,10 +21,6 @@ Vibras Store es una tienda online desarrollada en **React** que ofrece una exper
 - **CSS Modules** y diseño responsivo
 - **Axios** para consumo de APIs
 - **Node.js** y **Express** (para la API backend en otros proyectos relacionados)
-
-## 📸 Capturas de pantalla
-
-*(Opcional: aquí puedes agregar imágenes del sitio una vez desplegado)*
 
 ## 📦 Instalación local
 
