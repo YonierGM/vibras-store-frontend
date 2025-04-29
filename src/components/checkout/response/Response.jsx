@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./Response.css";
 
 export function Response() {
@@ -42,7 +43,6 @@ export function Response() {
     );
 
   const { data } = transactionDetails;
-  console.log("Detalles de la transacción:", data);
   const getStatusClass = () => {
     switch (data.x_response?.toLowerCase()) {
       case "aprobada":
@@ -79,9 +79,12 @@ export function Response() {
           <strong>Fecha:</strong> {data.x_transaction_date}
         </p>
       </div>
-      <a href="/" className="home-button">
-        Volver a la tienda 🛍️
-      </a>
+      <button
+        className="Button Button-buy"
+        aria-label="Ir a la página de productos para comprar"
+      >
+        <Link to="/products">Volver</Link>
+      </button>
     </div>
   );
 }
